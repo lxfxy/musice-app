@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1718772_2odhbknr7vz.css">
+    <script>
+
+      (function () {
+        let html = document.documentElement;
+        function computed() {
+          let winW = html.clientWidth;
+          let targetW = 375;
+          let rem = winW / targetW * 100;
+          // rem = targetW > winW ? rem : 100;
+          html.style.fontSize = rem + "px";
+        };
+        computed();
+        window.addEventListener("resize", computed);
+      })();
+
+    </script>
   </head>
   <body>
     <noscript>
